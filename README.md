@@ -30,6 +30,25 @@ jobs:
 Rust
 ----
 
+- runs `cargo fmt --check` and `cargo clippy` on stable or whatever
+  `rust-toolchain.toml` says
+- detects MSRV using `cargo-msrv`
+- runs `cargo check`, `cargo build` and `cargo test` on both detected MSRV and
+  stable or whatever `rust-toolchain.toml` says
+
+```yml
+---
+
+name: rust
+
+jobs:
+  call-workflow:
+    name: rust
+    uses: wookietreiber/workflows/.github/workflows/rust.yml@main
+
+...
+```
+
 Runs `cargo audit` via `rustsec/audit-check`:
 
 ```yml
