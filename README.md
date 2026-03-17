@@ -26,3 +26,28 @@ jobs:
 
 ...
 ```
+
+Rust
+----
+
+Runs `cargo audit` via `rustsec/audit-check`:
+
+```yml
+---
+
+name: rust-audit
+
+on:
+  pull_request:
+  push:
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  call-workflow:
+    uses: wookietreiber/workflows/.github/workflows/rust-cargo-audit.yml@main
+    secrets:
+      token: ${{ secrets.GITHUB_TOKEN }}
+
+...
+```
