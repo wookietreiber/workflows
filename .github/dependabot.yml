@@ -9,6 +9,8 @@ updates:
     schedule:
       interval: daily
       time: '06:00'
+    cooldown:
+      default-days: 7
     assignees:
       - wookietreiber
 
