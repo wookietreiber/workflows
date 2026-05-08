@@ -47,7 +47,7 @@ jobs:
       - name: install cargo-msrv
         uses: taiki-e/install-action@51cd0b8c0499559d9a4d75c0f5c67bec3a894ec8 # v2.75.28
         with:
-          tool: cargo-msrv
+          tool: cargo-msrv@0.19.3
 
       - name: show cargo-msrv version
         run: cargo msrv --version
