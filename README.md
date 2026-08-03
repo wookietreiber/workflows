@@ -9,8 +9,6 @@ Runs `actionlint` on GitHub workflows.
 ```yml
 ---
 
-name: actionlint
-
 on:
   pull_request:
     paths:
@@ -21,7 +19,6 @@ on:
 
 jobs:
   call-workflow:
-    name: actionlint
     uses: wookietreiber/workflows/.github/workflows/github-actionlint.yml@main
 
 ...
@@ -39,11 +36,8 @@ Rust
 ```yml
 ---
 
-name: rust
-
 jobs:
   call-workflow:
-    name: rust
     uses: wookietreiber/workflows/.github/workflows/rust.yml@main
 
 ...
@@ -53,8 +47,6 @@ Runs `cargo audit` via `rustsec/audit-check`:
 
 ```yml
 ---
-
-name: rust-audit
 
 on:
   pull_request:
