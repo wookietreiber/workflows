@@ -11,6 +11,8 @@ on:
       - .github/workflows/*.yml
   workflow_call:
 
+permissions: {}
+
 jobs:
   actionlint:
     runs-on: ubuntu-latest
