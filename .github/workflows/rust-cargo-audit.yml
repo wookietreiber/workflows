@@ -11,6 +11,8 @@ on:
 jobs:
 
   cargo-audit:
+    name: cargo-audit
+
     runs-on: ubuntu-latest
 
     steps:
