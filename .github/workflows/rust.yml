@@ -63,7 +63,9 @@ jobs:
         id: msrv
 
       - name: show msrv
-        run: echo ${{ steps.msrv.outputs.msrv }}
+        run: echo ${STEPS_MSRV_OUTPUTS_MSRV}
+        env:
+          STEPS_MSRV_OUTPUTS_MSRV: ${{ steps.msrv.outputs.msrv }}
 
   test:
     name: cargo check, build and test
