@@ -63,7 +63,7 @@ jobs:
         id: msrv
 
       - name: show msrv
-        run: echo ${STEPS_MSRV_OUTPUTS_MSRV}
+        run: echo "${STEPS_MSRV_OUTPUTS_MSRV}"
         env:
           STEPS_MSRV_OUTPUTS_MSRV: ${{ steps.msrv.outputs.msrv }}
 
