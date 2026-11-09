@@ -17,6 +17,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    permissions:
+      checks: write # PR status checks
+      issues: write # create issues from schedule
+
     steps:
 
       -
