@@ -31,7 +31,7 @@ jobs:
       - name: install cargo-audit
         uses: taiki-e/install-action@c509219cf42fba86913069efd0ade2458c59337b # v2.90.1
         with:
-          tool: cargo-audit@0.22.2
+          tool: cargo-audit@0.23.0
 
       - name: generate Cargo.lock if missing
         if: ${{ hashFiles('Cargo.lock') == '' }}
